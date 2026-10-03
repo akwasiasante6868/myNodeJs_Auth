@@ -1,6 +1,3 @@
-const dns = require('dns')
-dns.setServers(['8.8.8.8', '8.8.4.4'])
-
 require('dotenv').config()
 const express = require('express')
 const connectToDB = require('./DataBase/db')
@@ -9,9 +6,8 @@ const homeroutes = require('./routes/home-route')
 const adminRoutes = require('./routes/admin-routes')
 const uploadImageRoute = require('./routes/image-routes')
 const deleteImageById = require('./routes/image-routes')
-// const changePassword = require('./controllers/auth-controllers')
-const app = express()
 
+const app = express()
 
 connectToDB()
 const PORT = process.env.PORT || 3000
